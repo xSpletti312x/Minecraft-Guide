@@ -1,41 +1,171 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <meta charset="UTF-8">
     <title>Über mich</title>
     <link rel="shortcut icon" type="image" href="Profil.jpg" />
     <style>
+        body {
+            background-color: rgb(64, 65, 64);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-body {
-      background-color: rgb(64, 65, 64);
-    }
+        /* Banner */
+        .banner-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #222;
+            padding: 10px 20px;
+            position: sticky;
+            top: 0;
+        }
 
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .banner-left img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .banner-left h1 {
+            margin: 0;
+            font-size: 2em;
+            background: linear-gradient(90deg, #006400, #00ff00, #006400);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientAnimation 5s linear infinite;
+        }
+
+        .banner-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .banner-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .banner-links a:hover {
+            color: #00ff00;
+        }
+
+        h1, h2 {
+            color: #00ff00; /* hellgrün */
+        }
+
+        /* Animation Keyframes */
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Container Styles */
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 60px 20px;
+            gap: 40px;
+        }
+
+        .section img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+        .section-text {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-text p {
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+        }
+
+        /* Responsive Anpassung */
+        @media (max-width: 768px) {
+            .banner-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .banner-links {
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .section-text {
+                align-items: center;
+                text-align: center;
+            }
+
+            .section img {
+                margin: 0 0 20px 0;
+            }
+
+            .section-text p {
+                font-size: 1.2em;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="banner.css">
 </head>
 <body>
-    <div class="banner-container"> <!-- Banner -->
-         <img src="Profil.jpg" alt="Profil" style="width: 50px; height: 50px; position: absolute; left: 20px; top: 10px; border-radius: 50%;" title="My Profile Picture">
-        <h1>Über mich</h1>
-        <a class="banner-link" href="index.html" style="left: 400px;">Startseite</a>
-        <a class="banner-link" href="mods.html" style="left: 600px;">Mods</a>
-        <a class="banner-link" href="Ich.html" style="left: 800px;">Über mich</a>
-    </div>
-    <div style="display: flex; align-items: center; margin-top: 60px;">
-        <img src="Logo.jpeg" alt="Profil" style="width: 300px; height: 300px; border-radius: 50%; margin-left: 40px; margin-right: 60px;" title="Logo">
-        <div style="display: flex; flex-direction: column;">
-            <h2 style="color: #09ff00; font-size: 3em; margin: 0 0 30px 0; text-align: left; font-family: inherit;">Worüber und für Wen ist diese Website?</h2>
-            <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 0 0 10px 0;">Auf dieser Website findest du alles mögliche über Minecraft.<br> Also perfekt für Minecraftliebhaber!</p>
-            <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 0 0 10px 0;">Das ist nicht Wikipedia,<br> aber ein paar Empfehlungen und eigene Meinungen können vielleicht auch ganz hilfreich sein.</p>
+    <!-- Banner -->
+    <div class="banner-container">
+        <div class="banner-left">
+            <img src="Profil.jpg" alt="Profil" title="My Profile Picture">
+            <h1 class="animated-title">Über mich</h1>
+        </div>
+        <div class="banner-links">
+            <a href="index.html">Startseite</a>
+            <a href="mods.html">Mods</a>
+            <a href="Ich.html">Über mich</a>
         </div>
     </div>
-    <div style="display: flex; align-items: center; margin-top: 60px; justify-content: flex-end;">
-        <div style="display: flex; flex-direction: column; align-items: flex-end; margin-left: 40px; margin-right: 60px; text-align: right;">
-            <h2 style="color: #09ff00; font-size: 3em; margin: 0 0 30px 0; text-align: right; font-family: inherit;">Wer bin ich?</h2>
-            <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 0 0 10px 0;">Mein Gamertag ist Spletti312 und ich spiele seit 5 Jahren aktiv Minecraft.</p>
-            <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 0 0 10px 0;">Ich spiele mit meinen Freunden fast jeden Tag Minecraft und weis wovon ich rede.</p>
-            <p style="color: white; font-size: 1.5em; font-weight: bold; margin: 0 0 10px 0;">Ich möchte dir Vorschläge machen wie du dein gameplay verbessern kannst<br> und neue Perspektiven vorstellen, dabei versuche ich dies so einfach wie möglich zu erklären.</p>
+
+    <!-- Sektion 1: Worüber und für Wen -->
+    <div class="section">
+        <img src="Logo.jpeg" alt="Logo" title="Logo">
+        <div class="section-text">
+            <h2>Worüber und für Wen ist diese Website?</h2>
+            <p>Auf dieser Website findest du alles mögliche über Minecraft.<br> Also perfekt für Minecraftliebhaber!</p>
+            <p>Das ist nicht Wikipedia,<br> aber ein paar Empfehlungen und eigene Meinungen können vielleicht auch ganz hilfreich sein.</p>
         </div>
-        <img src="Profil.jpg" alt="Profil" style="width: 300px; height: 300px; border-radius: 50%; margin-left: 60px; margin-right: 0;" title="Profil">
+    </div>
+
+    <!-- Sektion 2: Wer bin ich -->
+    <div class="section" style="justify-content: flex-end;">
+        <div class="section-text" style="align-items: flex-end; text-align: right;">
+            <h2>Wer bin ich?</h2>
+            <p>Mein Gamertag ist Spletti312 und ich spiele seit 5 Jahren aktiv Minecraft.</p>
+            <p>Ich spiele mit meinen Freunden fast jeden Tag Minecraft und weiß wovon ich rede.</p>
+            <p>Ich möchte dir Vorschläge machen wie du dein Gameplay verbessern kannst<br> und neue Perspektiven vorstellen, dabei versuche ich dies so einfach wie möglich zu erklären.</p>
+        </div>
+        <img src="Profil.jpg" alt="Profil" title="Profil">
     </div>
 </body>
 </html>
