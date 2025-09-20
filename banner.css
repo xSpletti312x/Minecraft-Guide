@@ -55,3 +55,16 @@
         background-position: 0% 50%;
     }
 }
+
+@media (max-width: 768px) {
+    .banner-link {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        left: auto;
+    }
+    .banner-container h1 {
+        font-size: 2em;
+        padding-left: 60px;
+    }
+}
