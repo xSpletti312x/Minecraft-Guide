@@ -1,0 +1,45 @@
+.java-title, .bedrock-title, .minecraft-title {
+    color: #09ff00;
+    text-align: center;
+    width: 800px;
+    font-size: 2.5em;
+    font-family: inherit;
+    margin: 0;
+}
+.titles-row {
+    width: 100%;
+    max-width: 2400px;
+    margin: 40px auto 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+.main-title {
+    background-image: linear-gradient(90deg, #3dff3d, #226322, #3dff3d, #226322, #3dff3d);
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    width: 800px;
+    font-size: 2.5em;
+    font-family: inherit;
+    margin: 0 auto;
+    animation: gradientMove 6s linear infinite;
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.normal-title {
+    color: #09ff00;
+    text-align: center;
+    width: 800px;
+    font-size: 2.5em;
+    font-family: inherit;
+    margin: 0 auto;
+}

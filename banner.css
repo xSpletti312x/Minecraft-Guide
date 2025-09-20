@@ -1,0 +1,57 @@
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 2550px;
+    height: 70px;
+    background: #222; /* Dunkelgraues Rechteck */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-container h1 {
+    background-image: linear-gradient(90deg, #3dff3d, #226322, #3dff3d, #226322, #3dff3d);
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    font-size: 3em;
+    margin: 0;
+    animation: gradientMove 6s linear infinite;
+    width: 100%;
+    pointer-events: none;
+    padding-left: 100px; /* Abstand nach links */
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.banner-link {
+    position: absolute;
+    top: 15px;
+    left: 500px;
+    background: #333;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+.banner-link:hover {
+    background: #444;
+}
+@keyframes gradientMove {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
