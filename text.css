@@ -11,34 +11,7 @@
     max-width: 2400px;
     margin: 40px auto 0 auto;
     display: flex;
-    justify-content: space-between;
-}
-
-.images-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.java-img {
-    width: 1000px;
-    height: auto;
-    margin-left: 80px;
-}
-
-.bedrock-img {
-    width: 1000px;
-    height: auto;
-    margin-right: 80px;
-}
-
-.java-info, .bedrock-info {
-    color: white;
-    width: 800px;
-    margin: 20px auto 40px auto;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
+    justify-content: flex-start;
 }
 .main-title {
     background-image: linear-gradient(90deg, #3dff3d, #226322, #3dff3d, #226322, #3dff3d);
@@ -69,32 +42,4 @@
     font-size: 2.5em;
     font-family: inherit;
     margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-    .main-title {
-        width: 90%;
-        font-size: 2em;
-    }
-    .normal-title {
-        width: 90%;
-        font-size: 2em;
-    }
-    .titles-row {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .images-row {
-        flex-direction: column;
-        align-items: center;
-    }
-    .java-img, .bedrock-img {
-        width: 90%;
-        margin: 10px auto;
-    }
-    .java-info, .bedrock-info {
-        width: 90%;
-        margin: 20px auto;
-        font-size: 1em;
-    }
 }
